@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Trabajos | Rectificados Granados</title>
+    <style>
+        /* CONFIGURACIÓN ESTÉTICA */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f4f9; color: #333; }
+
+        /* NAVEGACIÓN */
+        nav {
+            background-color: #1a2a6c;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a { color: white; text-decoration: none; font-weight: bold; font-size: 1.1rem; }
+        nav a:hover { color: #f2a900; }
+
+        /* ENCABEZADO */
+        .header-galeria {
+            background: linear-gradient(rgba(26, 42, 108, 0.9), rgba(26, 42, 108, 0.9)), url('img/foto1.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        /* CONTENEDOR DE LA REJILLA */
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        /* CADA FOTO */
+        .foto-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            height: 280px;
+            background-color: #ddd;
+        }
+
+        .foto-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .foto-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* TEXTO AL PASAR EL RATÓN */
+        .foto-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(26, 42, 108, 0.85);
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .foto-item:hover .foto-info {
+            transform: translateY(0);
+        }
+
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">← Volver al Inicio</a>
+    </nav>
+
+    <header class="header-galeria">
+        <h1>Nuestros Trabajos Realizados</h1>
+        <p>Resultados garantizados en rectificados de alta precisión en Huércal de Almería</p>
+    </header>
+
+    <div class="container">
+        <div class="galeria-grid">
+            
+            <!-- FOTO 1 -->
+            <div class="foto-item">
+                <img src="img/foto1.jpg" alt="Trabajo de Rectificado 1">
+                <div class="foto-info">
+                    <h4>Rectificado de Culata</h4>
+                    <p>Proceso de acabado y comprobación.</p>
+                </div>
+            </div>
+
+            <!-- FOTO 2 -->
+            <div class="foto-item">
+                <img src="img/foto2.jpg" alt="Trabajo de Rectificado 2">
+                <div class="foto-info">
+                    <h4>Bloque de Motor</h4>
+                    <p>Encamisado y mandrinado.</p>
+                </div>
+            </div>
+
+            <!-- FOTO 3 -->
+            <div class="foto-item">
+                <img src="img/foto3.jpg" alt="Trabajo de Rectificado 3">
+                <div class="foto-info">
+                    <h4>Limpieza Ultrasónica</h4>
+                    <p>Descontaminación total de piezas.</p>
+                </div>
+            </div>
+
+            <!-- FOTO 4 -->
+            <div class="foto-item">
+                <img src="img/foto4.jpg" alt="Trabajo de Rectificado 4">
+                <div class="foto-info">
+                    <h4>Cigüeñal</h4>
+                    <p>Equilibrado dinámico de precisión.</p>
+                </div>
+            </div>
+
+            <!-- FOTO 5 -->
+            <div class="foto-item">
+                <img src="img/foto5.jpg" alt="Trabajo de Rectificado 5">
+                <div class="foto-info">
+                    <h4>Válvulas y Asientos</h4>
+                    <p>Rectificado y reglaje completo.</p>
+                </div>
+            </div>
+
+            <!-- FOTO 6 -->
+            <div class="foto-item">
+                <img src="img/foto6.jpg" alt="Trabajo de Rectificado 6">
+                <div class="foto-info">
+                    <h4>Montaje Final</h4>
+                    <p>Verificación de tolerancias antes de entrega.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>Rectificados Granados | Calle Higuera n18, Huércal de Almería | 605 91 67 33</p>
+    </footer>
+
+</body>
+</html>

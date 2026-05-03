@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva tu Cita | Rectificados Granados</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f4f9; margin: 0; padding: 0; }
+        nav { background: #1a2a6c; padding: 1rem; text-align: center; }
+        nav a { color: white; text-decoration: none; font-weight: bold; }
+        
+        .form-container { 
+            max-width: 600px; 
+            margin: 50px auto; 
+            background: white; 
+            padding: 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+        }
+        
+        h2 { color: #1a2a6c; text-align: center; margin-bottom: 25px; }
+        
+        .grupo-input { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #555; }
+        
+        input, select, textarea { 
+            width: 100%; 
+            padding: 12px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            box-sizing: border-box; /* Importante para el ancho */
+        }
+        
+        .btn-enviar { 
+            background: #f2a900; 
+            color: #1a2a6c; 
+            border: none; 
+            padding: 15px; 
+            width: 100%; 
+            font-weight: bold; 
+            cursor: pointer; 
+            border-radius: 5px; 
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        .btn-enviar:hover { background: #d99700; }
+        .volver { display: block; text-align: center; margin-top: 20px; color: #1a2a6c; text-decoration: none; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">← Volver a Rectificados Granados</a>
+    </nav>
+
+    <div class="form-container">
+        <h2>Solicitud de Cita Previa</h2>
+        <form action="#" method="POST">
+            <div class="grupo-input">
+                <label>Nombre Completo</label>
+                <input type="text" name="nombre" placeholder="Ej: Juan Pérez" required>
+            </div>
+
+            <div class="grupo-input">
+                <label>Teléfono de contacto</label>
+                <input type="tel" name="telefono" placeholder="600 000 000" required>
+            </div>
+
+            <div class="grupo-input">
+                <label>Correo Electrónico</label>
+                <input type="email" name="email" placeholder="correo@ejemplo.com">
+            </div>
+
+            <div class="grupo-input">
+                <label>Matrícula del Vehículo</label>
+                <input type="text" name="matricula" placeholder="1234 ABC">
+            </div>
+
+            <div class="grupo-input">
+                <label>Tipo de trabajo</label>
+                <select name="servicio">
+                    <option value="rectificado">Rectificado de Culata</option>
+                    <option value="bloque">Rectificado de Bloque</option>
+                    <option value="cigueñal">Rectificado de Cigüeñal</option>
+                    <option value="otros">Otros / Consulta General</option>
+                </select>
+            </div>
+
+            <div class="grupo-input">
+                <label>Comentarios adicionales</label>
+                <textarea name="mensaje" rows="4" placeholder="Cuéntanos brevemente qué necesita tu motor..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">Confirmar Solicitud</button>
+        </form>
+        <a href="index.html" class="volver">Cancelar y volver al inicio</a>
+    </div>
+
+</body>
+</html>

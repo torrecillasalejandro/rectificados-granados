@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectificados Granados | Huércal de Almería</title>
+    <style>
+        /* CONFIGURACIÓN BASE */
+        * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f9f9f9; }
+
+        /* NAVEGACIÓN */
+        nav {
+            background-color: #1a2a6c;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        nav .logo { color: white; font-weight: bold; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 1px; }
+        nav ul { list-style: none; display: flex; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { color: white; text-decoration: none; font-size: 0.9rem; transition: color 0.3s; font-weight: 500; }
+        nav ul li a:hover { color: #f2a900; }
+
+        /* SECCIÓN HERO (PORTADA) */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1530046339160-ce3e5b0c7a2f?auto=format&fit=crop&q=80&w=1000') no-repeat center center/cover;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .hero p { font-size: 1.3rem; margin-bottom: 30px; max-width: 700px; }
+
+        /* CONTENEDORES Y GRID */
+        .container { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+        .section-title { text-align: center; margin-bottom: 40px; color: #1a2a6c; font-size: 2rem; }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        /* TARJETAS */
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+            border-bottom: 4px solid transparent;
+        }
+        .card:hover { transform: translateY(-10px); border-bottom: 4px solid #f2a900; }
+        .card h3 { color: #1a2a6c; margin-bottom: 15px; }
+
+        /* BOTONES */
+        .btn {
+            display: inline-block;
+            background: #f2a900;
+            color: #1a2a6c;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover { background: #d99700; }
+
+        /* ICONOS DE CONFIANZA */
+        .trust-icons {
+            background: #1a2a6c;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .trust-icons .grid div h4 { margin: 10px 0; color: #f2a900; }
+
+        /* MAPA */
+        .map-container {
+            width: 100%;
+            height: 400px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #111;
+            color: #ccc;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        /* BOTÓN WHATSAPP */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25d366;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 768px) {
+            nav { flex-direction: column; padding: 1rem; }
+            nav ul { margin-top: 15px; }
+            .hero h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BOTÓN WHATSAPP ACTUALIZADO -->
+    <a href="https://wa.me/34605916733" class="whatsapp-float" target="_blank">
+        <span>Escríbenos: 605 91 67 33</span>
+    </a>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav>
+        <div class="logo">Rectificados Granados</div>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="reserva.html">Reserva tu cita</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- PORTADA -->
+    <header id="inicio" class="hero">
+        <h1>REPARACIÓN DE MOTORES</h1>
+        <p>Expertos en Huércal de Almería. Especialistas en rectificado de culatas, bloques y cigüeñales con precisión milimétrica.</p>
+        <div style="display: flex; gap: 15px;">
+            <a href="reserva.html" class="btn">Pedir Cita</a>
+            <a href="#servicios" class="btn" style="background: white;">Nuestros Servicios</a>
+        </div>
+    </header>
+
+    <!-- SECCIÓN CONFIANZA -->
+    <section class="trust-icons">
+        <div class="container" style="margin: 0 auto;">
+            <div class="grid">
+                <div>
+                    <span style="font-size: 2.5rem;">⚙️</span>
+                    <h4>Tecnología CNC</h4>
+                    <p>Precisión milimétrica en cada pieza.</p>
+                </div>
+                <div>
+                    <span style="font-size: 2.5rem;">🛡️</span>
+                    <h4>Garantía Real</h4>
+                    <p>Trabajos certificados por profesionales.</p>
+                </div>
+                <div>
+                    <span style="font-size: 2.5rem;">📍</span>
+                    <h4>Cercanía</h4>
+                    <p>Tu taller de confianza en Huércal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESUMEN SERVICIOS -->
+    <main class="container" id="servicios">
+        <h2 class="section-title">¿Qué hacemos por tu motor?</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Rectificado de Culatas</h3>
+                <p>Comprobación de estanqueidad, planeado y reglaje de válvulas para un rendimiento óptimo.</p>
+            </div>
+            <div class="card">
+                <h3>Galería de Trabajos</h3>
+                <p>Echa un vistazo a nuestras instalaciones y procesos técnicos.</p>
+                <a href="galeria.html" class="btn" style="margin-top: 15px;">Ver Galería</a>
+            </div>
+            <div class="card">
+                <h3>Bloques y Cigüeñales</h3>
+                <p>Rectificado de cilindros, encamisado y equilibrado de piezas dinámicas.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- UBICACIÓN Y CONTACTO ACTUALIZADO -->
+    <section class="container" id="contacto">
+        <h2 class="section-title">Nuestra Ubicación</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+            <div>
+                <h3>Visítanos en Huércal</h3>
+                <p>Calle Higuera, n18</p>
+                <p>04230 Huércal de Almería, Almería</p>
+                <br>
+                <p><strong>Teléfono:</strong> 605 91 67 33</p>
+                <p><strong>Email:</strong> info@rectificadosgranados.com</p>
+                <br>
+                <h3>Horario</h3>
+                <p>Lunes a Viernes: 8:30 - 14:00 | 16:00 - 19:30</p>
+                <br>
+                <a href="reserva.html" class="btn">Reservar Cita Previa</a>
+            </div>
+            <div class="map-container">
+                <!-- Mapa centrado en la dirección proporcionada -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3191.0718334466983!2d-2.4394042!3d36.883711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd70775d78a83091%3A0x86733ec608d23485!2sC.%20Higuera%2C%2018%2C%2004230%20Hu%C3%A9rcal%20de%20Almer%C3%ADa%2C%20Almer%C3%ADa!5e0!3m2!1ses!2ses!4v1715000000000!5m2!1ses!2ses" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Rectificados Granados - Calle Higuera 18, Huércal de Almería.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Excelencia en mecánica de precisión.</p>
+    </footer>
+
+</body>
+</html>
